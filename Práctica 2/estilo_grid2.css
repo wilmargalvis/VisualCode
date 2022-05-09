@@ -1,0 +1,48 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    grid-template-rows: minmax(20px, auto);
+    align-items: stretch;
+
+}
+
+.nested-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 100px; /*el tamaño del grid*/
+    gap: 1em; /*Espaciado*/
+}
+.nested-grid > div{
+    border: 1px solid #000;
+    background: #f1c40f;
+    padding: 1em;
+}
+
+.grid > div{
+    background: #5e5e5c;
+    padding: 1em;
+}
+
+.grid > div:hover{
+    border: 1px solid #3a11f5;
+}
+
+.element1{
+    align-self: start;
+}
+.element2{
+    align-self: center;
+}
+.element3{
+    align-self: end;
+}
+.element4{
+    justify-self: start;
+}
+.element5{
+    justify-self: center;
+}
+.element6{
+    justify-self: end;
+}

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+body{
+  background: #53534e;
+}
+.belleza{
+  position: absolute;
+  top: 50%;    /*Colocar los objetos de la clase en el punto Y=50% X=0% */
+  left: 50%;    /*Respecto a la izquierda, colocar los objetos de la clase al 50% (en la mitad) */
+  transform: translate(-50%,-50%);    /*Centrar los objetos dentro de la clase belleza */
+
+  /*Agregar los objetos de la clase belleza en un contenedor o cuadro*/
+
+  max-width: 230px;     /*Ancho del contenedor*/
+  width: 100%;
+  background: #FFF;   /*Color del contenedor*/
+  padding: 25px;    /* Borde entre los objetos(cuadros, textos) y el contenedor o cuadro */
+  border-radius: 15px;   /*Bordear de manera cirular el contenedor o cuadro*/
+  box-shadow: 0 0 20px 1px rgb(241, 241, 150,0.7);    /*añade efectos de sombra alrededor del marco*/
+}
+
+.belleza h2{
+  text-align: center;
+  margin-bottom: 20px;    /*establece el espacio requerido en la parte inferior de un elemento*/
+  text-transform: uppercase;    /*Texto en mayúscula*/
+  letter-spacing: 3px;    /*Espaciado de los caracteres del texto*/
+  color: #5719bb;
+}
+
+.belleza .cuadro_texto{
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.belleza textarea{
+  height: 50px;
+  resize: none;
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+}
+
+.belleza .etiqueta{
+  color: #bb1964;
+  margin-bottom: 10px;
+}
+
+.belleza .boton input[type="submit"]{
+  border: 0;
+  margin-top: 15px;
+  padding: 10px;
+  width: 90%;
+  color: #bb1964;
+  background: #fece0c;
+  text-transform: uppercase;
+  font-weight: bold;    /*Negrilla*/
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.error{
+  border: 1px solid    red;
+}
+
+
+  /* body {
+    font-family: 'Tangerine', serif;
+    font-size: 24px;
+    text-shadow: 4px 4px 4px #aaa;
+    background: #333;
+    color: #fff;
+  }
+  .belleza{
+    max-width: 350px;
+    width: 100%;
+  }
+  .belleza .cuadro_texto input[type="text"]{
+    border: 0;
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    color: yellowgreen;
+  }
+  .belleza .boton input[type="submit"]{
+    border: 0;
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    color: yellowgreen;
+  } */

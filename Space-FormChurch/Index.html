@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<style>
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 0 0 0 30px;
+    margin-left: 50px;
+    animation: spin 2s linear infinite;
+  }
+</style>
+
+<body>
+
+    <div class="container border border-info" style="margin-top: 40px;">
+
+        <div class="form-group row">
+            <div class="col-sm-4 text-right"><br>
+                <h3 style="align-self: auto;" for="titulo-registro">Registro Iglesia CFE</h3>
+            </div>
+
+            <div class="col-sm-0 spinner-border text-danger spinner-border m-4" role="status" id="cargando">
+                <span class="sr-only">Loading...</span>
+            </div>
+            
+            <div class="col-sm-4 text-right p-1" >
+                <!--<img src="https://vidaparalasnaciones.com/wp-content/uploads/2020/06/cropped-Logo.jpg"/>-->
+                <img src="https://static.wixstatic.com/media/3e2554_4be8304e47bb40a88f40130adca6f321~mv2_d_2194_1293_s_2.png/v1/fill/w_133,h_78,al_c,q_85,usm_0.66_1.00_0.01/3e2554_4be8304e47bb40a88f40130adca6f321~mv2_d_2194_1293_s_2.webp"/>
+            </div>
+            
+            <div class="col-sm-2 text-right p-3" >
+                <a style="align-content: flex-end;" href="https://docs.google.com/spreadsheets/d/1nIiQIqTA-8Fcl5PTvFfGP_7Oi4QhVFIi0aBxCjgspvQ/edit#gid=0" target="_blank">Base de datos Iglesia</a>
+            </div>
+        </div>
+
+        <form>
+            <div class="form-group row">
+                <div class="col-sm-3">
+                    <label for="cedula">Cédula<span id="cedulaspan" style="color:red;font-size:14px"> *</span></label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="number" class="form-control" placeholder="Cédula" id="cedula" required >
+                </div>
+                <div class="col-sm-3">
+                    <label for="nombre">Nombre<span id="nombrespan" style="color:red;font-size:14px"> *</span></label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" placeholder="Nombre" id="nombre" required>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-3">
+                    <label for="edad">Edad<span id="edadspan" style="color:red;font-size:14px"> *</span></label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="number" class="form-control" placeholder="Edad" id="edad" required>
+                </div>
+                <div class="col-sm-3">
+                    <label for="temp">Temperatura<span id="temperaturaspan" style="color:red;font-size:14px"> *</span></label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" placeholder="Temperatura" id="temperatura" required>
+                </div>
+            </div>
+
+            <div class="form-group row">
+
+                <div class="col-sm-6 border">
+                    <div>
+                        <div>
+                            <label for="temp" style="font-weight: bolder">1. ¿Ha tenido fiebre de difícil control mayor a 38°C ?</label> <br><br>
+                            <input type="radio" name="fiebre" id="r1" value="sí" required="required" aria-required="true"><label for="r1">Sí</label>
+                            <input type="radio" name="fiebre" id="r2" value="no" required="required" aria-required="true"><label for="r2">No</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 border">
+                    <div>
+                        <label for="temp" style="font-weight: bolder">2. ¿Tiene o ha tenido durante los últimos 14 días malestar general, dificultad respiratoria, secreción nasal, tos seca, fatiga o dolor de garganta?</label> <br>
+                        <input type="radio" name="malestar" id="r3" value="sí" required="required" aria-required="true"><label for="r3">Sí</label>
+                        <input type="radio" name="malestar" id="r4" value="no" required="required" aria-required="true"><label for="r4">No</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-6 border">
+                    <div>
+                        <label for="temp" style="font-weight: bolder">3. ¿En los últimos 14 días ha notado que ha perdido el sentido del olfato y el gusto?</label> <br>
+                        <input type="radio" name="sin_olfato" id="r5" value="sí" required="required" aria-required="true"><label for="r5">Sí</label>
+                        <input type="radio" name="sin_olfato" id="r6" value="no" required="required" aria-required="true"><label for="r6">No</label>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 border">
+                    <div>
+                        <label for="temp" style="font-weight: bolder">4. ¿En los últimos 14 días ha convivido o ha tenido contacto con alguna persona con los síntomas descritos en las preguntas anteriores? ¿Alguna de esas personas tienen Covid-19 o está esperando resultado del estudio? </label> <br>
+                        <input type="radio" name="contacto_personal" id="r7" value="sí" required="required" aria-required="true"><label for="r7">Sí</label>
+                        <input type="radio" name="contacto_personal" id="r8" value="no" required="required" aria-required="true"><label for="r8">No</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-6 border">
+                    <div>
+                        <label for="temp" style="font-weight: bolder">5. ¿Le han diagnosticado o está esperando resultado del Covid-19?</label> <br>
+                        <input type="radio" name="Espera_resultados" id="r9" value="sí" required="required" aria-required="true"><label for="r9">Sí</label>
+                        <input type="radio" name="Espera_resultados" id="r10" value="no" required="required" aria-required="true"><label for="r10">No</label>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 border">
+                    <div>
+                        <label for="temp" style="font-weight: bolder">6. ¿Sufre alguna enfermedad crónica como diabetes, problemas cardíacos, enfermedad renal, VIH, enfermedad auto-inmune? </label> <br>
+                        <input type="radio" name="enfermedades" id="r11" value="sí" required="required" aria-required="true"><label for="r11">Sí</label>
+                        <input type="radio" name="enfermedades" id="r12" value="no" required="required" aria-required="true"><label for="r12">No</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-6 border">
+                    <div>
+                        <label for="temp" style="font-weight: bolder">7. ¿Es usted cuidador de alguna persona con las enfermedades descritas en la pregunta anterior o mayor de 60 años?</label> <br>
+                        <input type="radio" name="cuida_persona" id="r13" value="sí" required="required" aria-required="true"><label for="r13">Sí</label>
+                        <input type="radio" name="cuida_persona" id="r14" value="no" required="required" aria-required="true"><label for="r14">No</label>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 border">
+                    <div>
+                        <label for="temp" style="font-weight: bolder">8. ¿Se encuentra en estado de embarazo? </label> <br>
+                        <input type="radio" name="embarazada" id="r15" value="sí" required="required" aria-required="true"><label for="r15">Sí</label>
+                        <input type="radio" name="embarazada" id="r16" value="no" required="required" aria-required="true"><label for="r16">No</label>
+                        <input type="radio" name="embarazada" id="r17" value="no aplica"><label for="r17">No aplica</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group form-check" style="text-align: center;">
+                <input type="checkbox" class="form-check-input" id="consentimiento" required="required" aria-required="true">
+                <label class="form-check-label" for="consentimiento">Doy consentimiento para que FE Y ESPERANZA almacene mis datos para ponerse en contacto conmigo </label>
+            </div>
+
+            <div style="text-align: center;">
+                <button type="submit" class="btn btn-primary" onclick="registrar()">Registrar</button><br><br>
+            </div>
+          </form>
+    </div><br><br>
+
+
+    <script>
+        
+        function registrar() {
+            show();
+            var cedula = document.getElementById("cedula").value;
+            var nombre = document.getElementById("nombre").value;
+            var edad = document.getElementById("edad").value;
+            var temperatura = document.getElementById("temperatura").value;
+            if (cedula == null || cedula.length == 0) {
+                document.getElementById("cedulaspan").innerHTML = " * Requerido";
+                //alert("no hay ceddula");
+                return;
+                }else{
+                document.getElementById("cedulaspan").innerHTML = "";
+                }
+
+            if (nombre == null || nombre.length == 0) {
+                document.getElementById("nombrespan").innerHTML = " * Requerido";
+                //alert("no hay ceddula");
+                return;
+                }else{
+                document.getElementById("nombrespan").innerHTML = "";
+                }
+
+            if (edad == null || edad.length == 0) {
+                document.getElementById("edadspan").innerHTML = " * Requerido";
+                //alert("no hay ceddula");
+                return;
+                }else{
+                document.getElementById("edadspan").innerHTML = "";
+                }
+
+            if (temperatura == null || temperatura.length == 0) {
+                document.getElementById("temperaturaspan").innerHTML = " * Requerido";
+                //alert("no hay ceddula");
+                return;
+                }else{
+                document.getElementById("temperaturaspan").innerHTML = "";
+                }
+        }
+
+        window.onload = function() {
+            hide();
+        };
+
+        function show() {
+            document.getElementById("cargando").style.display="block";
+//    setTimeout("hide()", 5000);  // 5 seconds
+        }
+
+        function hide() {
+            document.getElementById("cargando").style.display="none";
+        }
+
+        function myFunction() {
+        myVar = setTimeout(searchData, 1000);
+        }
+
+        // document.getElementById("txt_username").onkeypress = function(event){
+        // if (event.keyCode == 13 || event.which == 13){
+        // alert("You are clicked");
+        //         }
+        //     };
+    </script>
+
+</body>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="cedfc2687b650985ae4b4a60-|49" defer=""></script>
+</html>

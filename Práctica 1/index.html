@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+    <link rel="styleSheet" type="text/css" href="estilo.css">
+
+</head>
+
+<body>
+    <div>
+        <form id="form-tipogestion" action="/action_page.php">
+
+                <img src='https://drive.google.com/uc?export=view&id=1i_I5gb9tkh2o2kpITij-Hf5M0wQ3464b' oncopy="alert('Opcion deshabilitada');return false" oncontextmenu="alert('Opcion deshabilitada');return false" alt='Person' style='width:180px;border-radius: 100%;border: solid 4px white;'>
+                <img src='https://drive.google.com/uc?export=view&id=1i_I5gb9tkh2o2kpITij-Hf5M0wQ3464b' alt='Person' style='width:180px;border-radius: 100%;border: solid 4px white;'>
+
+            <table>
+                <tr>
+                    <td>
+                        <b>Nombre</b>
+                    </td>
+                    <td>
+                        <input type="text" id="nombre" class="requerido" >
+                    </td>
+                </tr>
+                <tr>
+                <td>
+                    Apellido
+                </td>
+                <td>
+                    <input type="text" id="apellido" class="requerido">
+                </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+
+                        <button type="submit" class="submit">Enviar</button>
+                    </td>
+                </tr>
+
+            </table>
+
+
+
+
+
+        </form>
+    </div>
+
+
+    <script>
+
+     //TAREA PONER UN COLOR  A TODOS CAMPOS  QUE ESTEN VACIOS CUANDO EL USUARIO HGA CLICK
+     //addEventListener en un evento
+        document.getElementById("form-tipogestion").addEventListener("submit", function (e) {   
+            
+           //class List  Adiciona una clase a un elemento
+
+            //NOMBRE DEL ELEMENTO
+            var element = document.getElementById("nombre");
+            var element2 = document.getElementById("apellido");
+
+          if(document.getElementById("nombre").value =="" )
+          {
+            element.classList.add("error"); //Se adiciona la clase error, la cual cambia el color del borde a las cajas de texto
+            console.log("wilmar")
+            alert("Rejuvenezcase");
+          }
+
+          if(document.getElementById("apellido").value =="")
+          {
+            element2.classList.add("error");
+
+          }
+ 
+            e.preventDefault();//NO HAGA REFRESO DE PAGINA
+    
+        });
+    
+         //SI CREA UN METODO EN JASVASCRIPT
+        function ValidarFormulario(){
+
+            if(document.getElementById("nombre").value =="" && document.getElementById("apellido").value =="")
+          {
+              return false;
+          }
+        }
+    
+    </script>
+
+</body>
+
+
+
+</html>

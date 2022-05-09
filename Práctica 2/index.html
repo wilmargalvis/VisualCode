@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+    <Link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <!--<br><div id="prueba"></div>    LINEA DE PRUEBA PARA JAVASCRIPT-->
+    <div class="belleza">
+        <h2>INGRESO DE DATOS</h2>
+        <div id="mensaje_error"></div>
+        <form action="" class="form1">
+            
+            <div class="etiqueta">
+                <label for="nombre">Nombre:</label>
+            </div>
+            <div class="cuadro_texto">
+                <input type="text" placeholder="Nombre" id="nombre">
+            </div>
+            <div class="etiqueta">
+                <label for="apellido">Apellido: </label>
+            </div>
+            <div class="cuadro_texto">
+                <input type="text" placeholder="Apellido" id="apellido">
+            </div>
+            <div class="etiqueta">
+                <label for="mensaje">Mensaje</label>
+            </div>
+            <div class="cuadro_texto">
+                <textarea id="message" placeholder="Mensaje descriptivo"></textarea>
+            </div>
+            <div class="boton">
+                <input type="submit" onclick="return Validar();">
+            </div>
+            
+        </form>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

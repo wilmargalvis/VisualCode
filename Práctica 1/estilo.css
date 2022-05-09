@@ -1,0 +1,28 @@
+body{
+
+background-color:darkgrey;
+
+}
+
+.input{
+border: 1px solid  blue;
+
+}
+
+.submit{
+ background-color: lightblue;
+
+}
+.error{
+    border: 1px solid    red;
+
+}
+
+/* .image {
+width: 180px;
+height: 180px;
+background-image: url ("https://drive.google.com/uc?export=view&id=1i_I5gb9tkh2o2kpITij-Hf5M0wQ3464b");
+background-size: 100% 100%;
+background-repeat: no-repeat;
+display: inline;
+} */
