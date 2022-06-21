@@ -10,7 +10,7 @@ html{
 
 body{
     background-color:rgba(0,0,0,.8);
-    color: rgba(200, 200,200,.9);
+    color: rgb(255, 255, 255);
 }
 
 .container{
@@ -67,6 +67,7 @@ body{
     border-bottom: 1px solid rgb(25, 14, 27);
     cursor: pointer;
     transform: scale(1.1);
+
 }
 
 .listado-tareas{
